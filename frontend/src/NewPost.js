@@ -3,7 +3,7 @@ import './NewPost.css';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { sendPostToAPI } from './actions/posts';
-import PostForm from './EditPost';
+import EditPost from './EditPost';
 
 function NewPost() {
 	const dispatch = useDispatch();
@@ -21,7 +21,7 @@ function NewPost() {
 	return (
 		<main>
 			<h1>New Post</h1>
-			<PostForm save={add} cancel={cancel} />
+			<EditPost save={add} cancel={cancel} />
 		</main>
 	);
 }

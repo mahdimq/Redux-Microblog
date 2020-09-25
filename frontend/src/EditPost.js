@@ -7,16 +7,16 @@ function EditPost({ post, save, cancel }) {
 		body: post.body
 	});
 
-	function handleChange(evt) {
-		const { name, value } = evt.target;
+	function handleChange(e) {
+		const { name, value } = e.target;
 		setPostData((data) => ({
 			...data,
 			[name]: value
 		}));
 	}
 
-	function handleSubmit(evt) {
-		evt.preventDefault();
+	function handleSubmit(e) {
+		e.preventDefault();
 		save(postData);
 	}
 
